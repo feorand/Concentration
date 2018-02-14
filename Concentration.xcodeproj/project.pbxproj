@@ -8,21 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		7A0365E61FD568C600D5151B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0365E51FD568C600D5151B /* AppDelegate.swift */; };
-		7A0365E81FD568C600D5151B /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0365E71FD568C600D5151B /* GameViewController.swift */; };
+		7A0365E81FD568C600D5151B /* ConcentrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0365E71FD568C600D5151B /* ConcentrationViewController.swift */; };
 		7A0365EB1FD568C600D5151B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A0365E91FD568C600D5151B /* Main.storyboard */; };
 		7A0365ED1FD568C600D5151B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A0365EC1FD568C600D5151B /* Assets.xcassets */; };
 		7A0365F01FD568C600D5151B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A0365EE1FD568C600D5151B /* LaunchScreen.storyboard */; };
 		7A3566C72033FBC600C26EF5 /* ThemeChooseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3566C62033FBC600C26EF5 /* ThemeChooseViewController.swift */; };
 		7A3566C92034055700C26EF5 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3566C82034055700C26EF5 /* Theme.swift */; };
 		7A5797592005DAD200F0ED90 /* Dictionary+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5797582005DAD200F0ED90 /* Dictionary+Extension.swift */; };
-		7A8ED2741FF3927F0042818E /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8ED2731FF3927F0042818E /* Card.swift */; };
-		7AC2AFC11FF390810062B55E /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC2AFC01FF390810062B55E /* Game.swift */; };
+		7A8ED2741FF3927F0042818E /* CardOfPair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8ED2731FF3927F0042818E /* CardOfPair.swift */; };
+		7AC2AFC11FF390810062B55E /* Concentration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC2AFC01FF390810062B55E /* Concentration.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7A0365E21FD568C500D5151B /* Concentration.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Concentration.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A0365E51FD568C600D5151B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7A0365E71FD568C600D5151B /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		7A0365E71FD568C600D5151B /* ConcentrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcentrationViewController.swift; sourceTree = "<group>"; };
 		7A0365EA1FD568C600D5151B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7A0365EC1FD568C600D5151B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7A0365EF1FD568C600D5151B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -30,8 +30,8 @@
 		7A3566C62033FBC600C26EF5 /* ThemeChooseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeChooseViewController.swift; sourceTree = "<group>"; };
 		7A3566C82034055700C26EF5 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		7A5797582005DAD200F0ED90 /* Dictionary+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Extension.swift"; sourceTree = "<group>"; };
-		7A8ED2731FF3927F0042818E /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
-		7AC2AFC01FF390810062B55E /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		7A8ED2731FF3927F0042818E /* CardOfPair.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardOfPair.swift; sourceTree = "<group>"; };
+		7AC2AFC01FF390810062B55E /* Concentration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Concentration.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,9 +67,9 @@
 				7A0365E91FD568C600D5151B /* Main.storyboard */,
 				7A3566C62033FBC600C26EF5 /* ThemeChooseViewController.swift */,
 				7A3566C82034055700C26EF5 /* Theme.swift */,
-				7A0365E71FD568C600D5151B /* GameViewController.swift */,
-				7AC2AFC01FF390810062B55E /* Game.swift */,
-				7A8ED2731FF3927F0042818E /* Card.swift */,
+				7A0365E71FD568C600D5151B /* ConcentrationViewController.swift */,
+				7AC2AFC01FF390810062B55E /* Concentration.swift */,
+				7A8ED2731FF3927F0042818E /* CardOfPair.swift */,
 				7A5797582005DAD200F0ED90 /* Dictionary+Extension.swift */,
 				7A0365F71FD5693C00D5151B /* Supporting Files */,
 				7A0365F11FD568C600D5151B /* Info.plist */,
@@ -159,11 +159,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7A0365E81FD568C600D5151B /* GameViewController.swift in Sources */,
+				7A0365E81FD568C600D5151B /* ConcentrationViewController.swift in Sources */,
 				7A5797592005DAD200F0ED90 /* Dictionary+Extension.swift in Sources */,
-				7AC2AFC11FF390810062B55E /* Game.swift in Sources */,
+				7AC2AFC11FF390810062B55E /* Concentration.swift in Sources */,
 				7A0365E61FD568C600D5151B /* AppDelegate.swift in Sources */,
-				7A8ED2741FF3927F0042818E /* Card.swift in Sources */,
+				7A8ED2741FF3927F0042818E /* CardOfPair.swift in Sources */,
 				7A3566C72033FBC600C26EF5 /* ThemeChooseViewController.swift in Sources */,
 				7A3566C92034055700C26EF5 /* Theme.swift in Sources */,
 			);

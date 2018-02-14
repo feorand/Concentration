@@ -8,16 +8,21 @@
 
 import UIKit
 
-class GameViewController: UIViewController
+class ConcentrationViewController: UIViewController
 {
     @IBOutlet weak var flipCountLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet var flipCardButtons: [UIButton]!
     @IBOutlet weak var newGameButton: UIButton!
     
-    var currentTheme: Theme = themes["Faces"]! { didSet { setTheme() }}
+    var currentTheme: Theme = themes["Faces"]! {
+        didSet {
+            setTheme()
+            UpdateGameView(flips: game.flipCount, score: game.score)
+        }
+    }
     
-    var game:Game!
+    var game:Concentration!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,12 +31,7 @@ class GameViewController: UIViewController
         
         startNewGame()
         UpdateGameView(flips: 0, score: 0)
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        UpdateGameView(flips: game.flipCount, score: game.score)
+        setTheme()
     }
     
     @IBAction func touchCard(_ sender: UIButton) {
@@ -74,7 +74,7 @@ class GameViewController: UIViewController
     }
     
     private func startNewGame() {
-        game = Game(numberOfPairs: 6)
+        game = Concentration(numberOfPairs: 6)
     }
     
     private func setTheme() {
@@ -86,7 +86,7 @@ class GameViewController: UIViewController
     }
 }
 
-extension GameViewController: UISplitViewControllerDelegate {
+extension ConcentrationViewController: UISplitViewControllerDelegate {
     func splitViewController(_ splitViewController: UISplitViewController, collapseSecondary secondaryViewController: UIViewController, onto primaryViewController: UIViewController) -> Bool {
         return true
     }

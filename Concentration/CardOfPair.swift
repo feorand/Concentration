@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Card {
+struct CardOfPair {
 
     var isFlipped = false
     var isEnabled = true
@@ -23,13 +23,13 @@ struct Card {
     }
 }
 
-extension Card: Equatable {
-    public static func ==(lhs: Card, rhs: Card) -> Bool {
+extension CardOfPair: Equatable {
+    public static func ==(lhs: CardOfPair, rhs: CardOfPair) -> Bool {
         return (lhs.id == rhs.id)
     }
 }
 
-extension Card: Hashable {
+extension CardOfPair: Hashable {
     var hashValue: Int {
         return id.hashValue
     }

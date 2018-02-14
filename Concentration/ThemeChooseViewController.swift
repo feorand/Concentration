@@ -10,13 +10,13 @@ import UIKit
 
 class ThemeChooseViewController: UIViewController {
     
-    var lastSeguedVC:GameViewController?
+    var lastSeguedVC:ConcentrationViewController?
     
     @IBAction func themeButtonPressed(sender: UIButton) {
         if let gameController = lastSeguedVC {
             let name = nameOf(sender: sender)
             gameController.currentTheme = themes[name]!
-            navigationController?.pushViewController(gameController, animated: true)
+            navigationController?.splitViewController?.showDetailViewController(gameController, sender: sender)
         } else {
             performSegue(withIdentifier: "Chose Theme", sender: sender)
         }
@@ -26,7 +26,7 @@ class ThemeChooseViewController: UIViewController {
         switch segue.identifier {
         case .some("Chose Theme"):
             let name = nameOf(sender: sender)
-            let controller = segue.destination as! GameViewController
+            let controller = segue.destination as! ConcentrationViewController
             controller.currentTheme = themes[name]!
             lastSeguedVC = controller
         default: break

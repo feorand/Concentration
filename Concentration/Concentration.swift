@@ -8,9 +8,9 @@
 
 import Foundation
 
-class Game {
-    var cards = [Card]()
-    var seenCards = Set<Card>()
+class Concentration {
+    var cards = [CardOfPair]()
+    var seenCards = Set<CardOfPair>()
     private(set) var flipCount = 0
     private(set) var score = 0
     var isOver = false
@@ -27,7 +27,7 @@ class Game {
         }
         
         for _ in 0..<numberOfPairs {
-            let card = Card(withId: newId())
+            let card = CardOfPair(withId: newId())
             cards += [card, card]
         }
         
@@ -46,7 +46,7 @@ class Game {
         }
     }
     
-    private func getFlippedCards() -> [Card] {
+    private func getFlippedCards() -> [CardOfPair] {
         return cards.filter{$0.isFlipped}
     }
     
