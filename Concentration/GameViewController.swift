@@ -15,7 +15,7 @@ class GameViewController: UIViewController
     @IBOutlet var flipCardButtons: [UIButton]!
     @IBOutlet weak var newGameButton: UIButton!
     
-    var currentTheme: Theme = themes["Faces"]!
+    var currentTheme: Theme = themes["Faces"]! { didSet { setTheme() }}
     
     var game:Game!
     
@@ -24,6 +24,12 @@ class GameViewController: UIViewController
         
         startNewGame()
         UpdateGameView(flips: 0, score: 0)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        UpdateGameView(flips: game.flipCount, score: game.score)
     }
     
     @IBAction func touchCard(_ sender: UIButton) {
@@ -67,7 +73,6 @@ class GameViewController: UIViewController
     
     private func startNewGame() {
         game = Game(numberOfPairs: 6)
-        setTheme()
     }
     
     private func setTheme() {

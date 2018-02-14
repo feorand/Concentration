@@ -9,19 +9,32 @@
 import UIKit
 
 class ThemeChooseViewController: UIViewController {
+    
+    var lastSeguedVC:GameViewController?
+    
     @IBAction func themeButtonPressed(sender: UIButton) {
-        performSegue(withIdentifier: "Chose Theme", sender: sender)
+        if let gameController = lastSeguedVC {
+            let name = nameOf(sender: sender)
+            gameController.currentTheme = themes[name]!
+            navigationController?.pushViewController(gameController, animated: true)
+        } else {
+            performSegue(withIdentifier: "Chose Theme", sender: sender)
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segue.identifier {
         case .some("Chose Theme"):
-            let senderButton = sender! as! UIButton
-            let name = senderButton.title(for: .normal)!
-            
+            let name = nameOf(sender: sender)
             let controller = segue.destination as! GameViewController
             controller.currentTheme = themes[name]!
+            lastSeguedVC = controller
         default: break
         }
+    }
+    
+    private func nameOf(sender: Any?) -> String {
+        let senderButton = sender! as! UIButton
+        return senderButton.title(for: .normal)!
     }
 }
