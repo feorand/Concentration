@@ -22,6 +22,8 @@ class GameViewController: UIViewController
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        splitViewController?.delegate = self
+        
         startNewGame()
         UpdateGameView(flips: 0, score: 0)
     }
@@ -81,6 +83,12 @@ class GameViewController: UIViewController
         flipCountLabel.textColor = currentTheme.foregroundColor
         scoreLabel.textColor = currentTheme.foregroundColor
         newGameButton.setTitleColor(currentTheme.foregroundColor, for: .normal)
+    }
+}
+
+extension GameViewController: UISplitViewControllerDelegate {
+    func splitViewController(_ splitViewController: UISplitViewController, collapseSecondary secondaryViewController: UIViewController, onto primaryViewController: UIViewController) -> Bool {
+        return true
     }
 }
 
