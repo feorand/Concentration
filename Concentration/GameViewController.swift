@@ -20,9 +20,6 @@ class GameViewController: UIViewController
     let themes:[String: Theme] = [
         "halloween": (["👻", "🎃", "💀", "🦇", "🧙‍♀️", "🍎"], #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1), #colorLiteral(red: 1, green: 0.5763723254, blue: 0, alpha: 1)),
         "christmas": (["🌲", "☃️", "🍭", "🎅", "❄️", "👶"], #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), #colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1)),
-        "sports": (["🏀", "🏈", "🏹", "🏋️‍♀️", "🥇", "🎯"], #colorLiteral(red: 0.1764705926, green: 0.01176470611, blue: 0.5607843399, alpha: 1), #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1)),
-        "animals": (["🐶", "🐱", "🐭", "🦊", "🐸", "🐷"], #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1), #colorLiteral(red: 0.5058823824, green: 0.3372549117, blue: 0.06666667014, alpha: 1)),
-        "fruits": (["🍏", "🍐", "🍌", "🍋", "🍍", "🥝"], #colorLiteral(red: 0.4666666687, green: 0.7647058964, blue: 0.2666666806, alpha: 1), #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1)),
         "faces": (["😀", "😂", "😘", "😎", "🤪", "😱"], #colorLiteral(red: 0.9764705896, green: 0.850980401, blue: 0.5490196347, alpha: 1), #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1))
     ]
     
@@ -82,8 +79,6 @@ class GameViewController: UIViewController
     }
     
     private func setTheme() {
-        currentTheme = themes.randomElement()
-        
         view.backgroundColor = currentTheme.backgroundColor
                 
         flipCountLabel.textColor = currentTheme.foregroundColor
