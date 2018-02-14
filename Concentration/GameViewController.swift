@@ -15,7 +15,7 @@ class GameViewController: UIViewController
     @IBOutlet var flipCardButtons: [UIButton]!
     @IBOutlet weak var newGameButton: UIButton!
     
-    var currentTheme: Theme!
+    var currentTheme: Theme = themes["Faces"]!
     
     var game:Game!
     
@@ -71,8 +71,6 @@ class GameViewController: UIViewController
     }
     
     private func setTheme() {
-        currentTheme = themes.randomElement()
-        
         view.backgroundColor = currentTheme.backgroundColor
                 
         flipCountLabel.textColor = currentTheme.foregroundColor
